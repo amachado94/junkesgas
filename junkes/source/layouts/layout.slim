@@ -1,0 +1,40 @@
+doctype 5
+html
+  head
+    meta charset="utf-8"
+    
+    title= data.page.title || "Junkes Gás"
+  
+    = stylesheet_link_tag "normalize", "all" 
+    = javascript_include_tag  "all" 
+    
+    link rel='shortcut icon' href='/images/favicon.ico'
+
+  
+  body
+    #page
+      #session
+        ul.list 
+          li= link_to "index.html" do
+            =image_tag "/images/logo.jpg", id: "headlogo"
+          li= link_to "contato.html" do 
+            =image_tag "/images/tel.jpg", id: "tel"
+          li= link_to "http://www.nacionalgas.com.br" do
+              =image_tag "/images/nacionalgaslogo.jpg", id: "nacional"
+          
+      #header 
+        = link_to "index.html" do 
+          =image_tag "/images/cargagas.jpg", id: "logo"
+      nav#nav
+        ul 
+          li= link_to "INÍCIO", "index.html", title: "Junkes Gás - Página Inicial"
+          li= link_to "PRODUTOS", "produtos.html", title: "Nossos Produtos"
+          li= link_to "SERVIÇOS", "servicos.html", title: "Nossos Serviços"
+          li= link_to "ATENDIMENTO", "atendimento.html", title: "Atendimento ao Cliente"
+          li= link_to "PROMOÇÕES", "promocoes.html", title: "Conheça nossos brindes e promoções"
+          li= link_to "CONTATO", "contato.html", title: "Fale Conosco"
+          
+      #content= yield
+
+      #footer Junkes Gás Distribuidora Ltda - 2014 - Todos os direitos reservados.
+
