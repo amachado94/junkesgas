@@ -25,21 +25,15 @@ html
               =image_tag "/images/botoes/servicos.jpg", id: "bottom", title: "Nossos serviços"
           li.bot= link_to "contato.html" do
               =image_tag "/images/botoes/contato.jpg", id: "bottom", title: "Contato e nossa Localização"
-          li.bot= link_to "index.html" do
+          li.bot= link_to "atendimento.html" do
               =image_tag "/images/botoes/atendimento.jpg", id: "atendimentobot", title: "Nosso atendimento"
-          //li= link_to "contato.html" do 
-            =image_tag "/images/botoes/tel.jpg", id: "tel"
           li= link_to "http://www.nacionalgas.com.br" do
               =image_tag "/images/botoes/nacionalgaslogo.jpg", id: "nacional", title: "Nacional Gás"
           
       #header 
         div id="tran-image"
-          =image_tag "/images/cargagas.JPG", id: "tran"
-          =image_tag "/images/nacional2.jpg", id: "tran"
           =image_tag "/images/nacional3.jpg", id: "tran"
           =image_tag "/images/contato.jpg", id: "tran"
-        //= link_to "index.html" do 
-            =image_tag "/images/cargagas.jpg", id: "logo"
       
       #content= yield
 
