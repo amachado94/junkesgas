@@ -12,30 +12,42 @@ html
 
   
   body
-    #page
-      #session
-        ul.list
-          li= link_to "index.html" do
-              =image_tag "/images/botoes/logo.jpg", id: "headlogo"
-          li.botfirst = link_to "index.html" do
-              =image_tag "/images/botoes/inicio.jpg", id: "bottom", title: "Página Inicial"
-          li.bot= link_to "produtos.html" do
-              =image_tag "/images/botoes/produtos.jpg", id: "bottom", title: "Nossos produtos"
-          li.bot= link_to "index.html" do
-              =image_tag "/images/botoes/servicos.jpg", id: "bottom", title: "Nossos serviços"
-          li.bot= link_to "contato.html" do
-              =image_tag "/images/botoes/contato.jpg", id: "bottom", title: "Contato e nossa Localização"
-          li.bot= link_to "atendimento.html" do
-              =image_tag "/images/botoes/atendimento.jpg", id: "atendimentobot", title: "Nosso atendimento"
+    #session
+      #session_menu.sess
+        ul.session
+          li= link_to "empresa.html" do
+            =image_tag "/images/botoes/logo.jpg", id: "logo", title: "Conheça a Junkes Gás"
+          li.botton_session= link_to "index.html" do
+            =image_tag "/images/botoes/inicio.jpg", id: "bottons_session", title: "Página Inicial"
+          li.botton_session= link_to "produtos.html" do
+            =image_tag "/images/botoes/produtos.jpg", id: "bottons_session", title: "Nossos produtos"
+          li.botton_session= link_to "servicos.html" do
+            =image_tag "/images/botoes/servicos.jpg", id: "bottons_session", title: "Nossos serviços"
+          li.botton_session= link_to "contato.html" do
+            =image_tag "/images/botoes/contato.jpg", id: "bottons_session", title: "Contato e nossa Localização"
           li= link_to "http://www.nacionalgas.com.br" do
-              =image_tag "/images/botoes/nacionalgaslogo.jpg", id: "nacional", title: "Nacional Gás"
-          
-      #header 
-        div id="tran-image"
-          =image_tag "/images/nacional3.jpg", id: "tran"
-          =image_tag "/images/contato.jpg", id: "tran"
-      
+            =image_tag "/images/botoes/nacionalgaslogo.jpg", id: "nacional_logo", title: "Nacional Gás"
+      .beta.contorno_texto
+          |Versão 1.1 Beta
+    
+    #dicas
+      = link_to "seguranca.html" do 
+        =image_tag "/images/botoes/seguranca2.jpg", id: "img_seguranca"
+
+    #page
+
       #content= yield
 
-      #footer Junkes Gás Distribuidora Ltda - 2014 - Todos os direitos reservados.
-
+    #footer  
+      #link
+        .r_social
+          = link_to "https://twitter.com/" do 
+            =image_tag "/images/logo_twitter.png", id: "r_social", title: "Twitter Junkes Gás"
+          = link_to "https://www.facebook.com/JunkesGas?fref=ts" do 
+            =image_tag "/images/face_logo.jpg", id: "r_social", title: "Facebook Junkes Gás" 
+          = link_to "http://junkesegas.blogspot.com.br/" do 
+            =image_tag "/images/blog_logo.jpg", id: "r_social", title: "Blog Junkes Gás"
+       
+        .clear
+      #footer_name
+        |© Junkes Gás Distribuidora Ltda | 2014 | Todos os direitos reservados
